@@ -128,7 +128,7 @@ header .overlay .inputs{
 header .overlay .inputs .form-control{
     padding-left: 25px;
 }
-header .overlay .inputs i{
+header .overlay .inputs i.src-icon{
     position: absolute;
     left: 7px;
     top: 12px;
@@ -152,6 +152,11 @@ header .overlay .inputs .btn{
 header .overlay .inputs .btn:hover{
     background: linear-gradient(45deg, #267B4B, #115240);
 }
+header .overlay .inputs .btn .icon{
+    display: none;
+    text-align: center;
+}
+
 @media (max-width: 576px){
     header .overlay h1{
         margin-top: 100px;
@@ -163,10 +168,16 @@ header .overlay .inputs .btn:hover{
         font-size: 16px;
     }
     header .overlay .inputs{
-        width: 350px;
+        width: 320px;
     }
     header .overlay .inputs .btn{
-        width: 90px;
+        width: fit-content !important;
+    }
+    header .overlay .inputs .btn .icon{
+        display: block;
+    }
+    header .overlay .inputs .btn .lable{
+        display: none;
     }
 }
 /*--------------*/
@@ -233,6 +244,9 @@ header .overlay .inputs .btn:hover{
 
 /*  Second Section ------------------------------------*/
 
+.secod-section .uni-title{
+    font-size: 2.75rem;
+}
 
 .secod-section .cont-pos{
     position: relative;
@@ -285,6 +299,9 @@ header .overlay .inputs .btn:hover{
 
 
 @media (max-width: 768px){
+    .secod-section .uni-title{
+        font-size: 1.75rem;
+    }
     .secod-section .cont-pos{
         display: none;
     }
@@ -292,18 +309,14 @@ header .overlay .inputs .btn:hover{
         display: block !important;
     }
     .number-style{
-        font-size: 60px;
+        font-size: 45px;
         color: #267B4B;
     }
-
+    .secod-section .cont-small-screen p{
+        letter-spacing: 0 !important;
+    }
     
 }
-
-
-
-
-
-
 
 
 
@@ -356,7 +369,10 @@ header .overlay .inputs .btn:hover{
         display: none;
     }
     .third-section .flex-container{
-        display: block !important;
+        display: flex !important;
+        flex-direction: column;
+        text-align: center;
+        
     }
     .third-section .flex-container p{
         font-size: 14px;
@@ -399,6 +415,32 @@ header .overlay .inputs .btn:hover{
 .forth-section .container .zer button:hover{
     opacity: .8;
 }
+
+@media (max-width: 576px){
+    .forth-section{
+        height: 500px;
+    }
+    .forth-section .container div p{
+        letter-spacing: 0;
+        line-height: 30px;
+        font-weight: 500;
+    }
+    .forth-section .container .options-solutions p{
+        letter-spacing: 0;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .forth-section .container div .cycle-img{
+        padding: 10px;
+    }
+    .forth-section .container .zer button{
+        padding: 10px 25px;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+}
+
+
 /*----------------- fifth-section -------------------*/ 
 /*--------  القسم الخامس -------- Slider Card  */
 
@@ -428,6 +470,16 @@ header .overlay .inputs .btn:hover{
     box-shadow: 0px 0px 20px 2px #71717150;
     cursor: pointer;
 }
+@media (max-width: 576px){
+    .container .p-h2 p{
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+    .container .p-h2 h2{
+        font-size: 16px;
+        letter-spacing: 0;
+    }
+}
 .items hr{
     border: 1.5px solid #0B873E;
     width: 30px;
@@ -449,62 +501,33 @@ header .overlay .inputs .btn:hover{
     border: none;
     cursor: pointer;
 }
-/*
-.fifth-section .container .p-h2 p{
-    color: #707070;
-    font-size: 14px;
-    letter-spacing: 2px;
-}
-.fifth-section .container .p-h2 h2{
-    color: #2C2C2C;
-    line-height: 20px;
-    letter-spacing: 1px;
-}
 
-
-.fifth-section .container .arrows{
-    padding-top: 20px;
-}
-.fifth-section .container .arrows a{
-    cursor: pointer;
-    color: #C7C7C7;
-    font-size: 25px;
-}
-.fifth-section .container .arrows a i{
-    padding-left: 10px;
-}
-.fifth-section .container .arrows a i:hover{
-    background-color: #115240;
-    color: white;
-    border-radius: 50%;
-    padding: 10px;
-    outline: none;
-    border: none;
-    cursor: pointer;
-}
-
-.fifth-section .container .clients-card{
-    box-shadow: 0px 0px 20px 2px #71717150;
-    margin: 20px;
-}
-.fifth-section .container .clients-card:hover{
-    box-shadow: 0px 0px 20px 5px #71717150;
-    cursor: pointer;
-    transform: scale(1.1, 1.1);
-    transition: .5s ease-in-out;
-}
-.fifth-section .clients-card hr{
-    border: 1.5px solid #0B873E;
-    width: 30px;
-    border-radius: 30px;
-}
-/*
-/*  القسم الخامس --------------------------------- Slider Card  */
 
 /* ------------------------------ */
 
 .sixth-section{
     margin-top: 150px;
+}
+.sixth-section button{
+    width: 100%; 
+    margin-top: 15px;
+}
+
+@media (max-width: 576px){
+    .sixth-section{
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .sixth-section img{
+        width: 80%;
+        margin: auto;
+    }
+    .sixth-section h1{
+        font-size: 25px;
+        margin-top: 1.5rem;
+    }
 }
 /* --------------------*/ 
 
@@ -535,10 +558,24 @@ header .overlay .inputs .btn:hover{
     color: white;
     background-color: #115240;
     font-weight: bold;
-    border-radius: 25px;
-    cursor: pointer;
     outline: none;
     transition: .3s ease-in-out;
+}
+
+@media (max-width: 576px){
+    .section-seven-eight{
+        margin-top: 100px;
+    }
+    .section-seven-eight .mylist .nav-link{
+        display: none;
+    }
+    .section-seven-eight .title{
+        font-size: 20px;
+        margin: 0 !important;
+    }
+    .section-seven-eight .new-btn{
+        margin-top: 0 !important;
+    }
 }
 /**----------------------------------*/
 footer{
@@ -623,4 +660,10 @@ footer .last-footer{
 .my-button:hover{
     color: white;
     background: linear-gradient(45deg, #267B4B, #115240);
+}
+@media (max-width: 576px){
+    .my-button{
+        width: 200px;
+        font-size: 14px;
+    }
 }
