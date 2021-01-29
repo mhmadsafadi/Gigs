@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>JosgIgs</title>
+</head>
+<body>
+  
+    
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+        <div class="container">
+            <a href="#"><img class="logo" src="images/logo.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Find Freelancer<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Find Jobs</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        About
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">About</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">About</a>
+                    </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Solutions
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Solutions</a>
+                        </div>
+                    </li>
+                </ul>
+            
+                <button class="my-btn" type="submit">Post a job</button>
+                <div class="dropdown-divider"></div>
+                <div class="second-nav-link">
+                    <a data-toggle="modal" data-target="#signup">
+                      Signup
+                    </a>
+                    |
+                    <a data-toggle="modal" data-target="#login">
+                      Login
+                    </a>
+                </div>
+                <div class="modal fade" id="signup" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <strong class="modal-title" id="exampleModalLabel">Signup</strong>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form role="form" method="post" action="register.php">
+                          <fieldset>							
+                            <div class="form-group">
+                              <input type="text" name="username" id="username" class="form-control input-lg" placeholder="username">
+                            </div>
+              
+                            <div class="form-group">
+                              <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address">
+                            </div>
+                            <div class="form-group">
+                              <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password">
+                            </div>
+                              <div class="form-group">
+                              <input type="password" name="password2" id="password2" class="form-control input-lg" placeholder="Password2">
+                            </div>
+                            <div class="form-group form-check">
+                              <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox"> Agree to our terms.
+                              </label>
+                            </div>
+                            <div>
+                              <button type="submit" class="btn my-btn">SIGN UP</button>
+                            </div>
+                          </fieldset>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+                <div class="modal fade" id="login" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <strong class="modal-title" id="exampleModalLabel">Login</strong>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form>
+                          <div class="form-group">
+                            <label for="email">Email address:</label>
+                            <input type="email" class="form-control" placeholder="Enter email" id="email">
+                          </div>
+                          <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+                          </div>
+                          <div class="form-group form-check">
+                            <label class="form-check-label">
+                              <input class="form-check-input" type="checkbox"> Remember me
+                            </label>
+                          </div>
+                          <button type="submit" class="btn my-btn">Login</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <header class="mt-5">
+        <div class="overlay img-fluid">
+            <div class="container">
+                <h1 class="wow bounceInLeft">Find & Hire <br>Expert Freelancer</h1>
+                <p class="wow fadeInLeft" data-wow-delay=".1s">Work with the best freelance talent from around the world on our secure <br>
+                    flexible and cost-effective platform.</p>
+
+                <hr class="wow swing" data-wow-delay=".2s">
+                <div class="inputs wow fadeInUp" data-wow-delay=".3s">
+                    <i class="fa fa-search"></i>
+                    <input class="form-control" type="text" placeholder="What skill are you looking for?">
+                    <button type="submit" class="btn">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!-- Button trigger modal -->
+
+    <section class="first-section mt-5">
+        <div class="container wow fadeInUp">
+            <div class="text-center mb-5 wow fadeInUp">
+                <h1 class="title">Find Top Freelancers</h1>
+                <p class="details">There are many variations of passages oforem are many variations of There are many <br> variations of passages of</p>
+            </div>
+
+            <div class="row text-center">
+                <div class="col col-lg-4 col-sm-12 col-12 col-md-6">
+                    <div class="my-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100.302" height="97.288" viewBox="0 0 100.302 97.288">
+                            <path id="_002-layers" data-name="002-layers" d="M82.677,39.376,100.3,29.306,50.152.825,0,29.306l17.624,10.07L0,49.383l17.624,10.07L0,69.461,50.152,98.113,100.3,69.461,82.677,59.453,100.3,49.383ZM50.152,5.023,92.926,29.315,50.152,53.755,7.376,29.315ZM21.309,41.48,50.152,57.958,78.994,41.48l13.932,7.912L50.152,73.832,7.376,49.392ZM92.926,69.47,50.152,93.91,7.376,69.47l13.934-7.912L50.152,78.036,78.994,61.558Z" transform="translate(0 -0.825)"/>
+                        </svg>                          
+                        <h3>Graphic Design</h3>
+                        <hr>
+                    </div>
+                </div>
+                <div class="col col-lg-4 col-sm-12 col-12 col-md-6">
+                    <div class="my-card">
+                        <svg id="_008-digital-marketing" data-name="008-digital-marketing" xmlns="http://www.w3.org/2000/svg" width="95.294" height="95.294" viewBox="0 0 95.294 95.294">
+                            <g id="Group_3" data-name="Group 3" transform="translate(43.608 80.006)">
+                              <g id="Group_2" data-name="Group 2">
+                                <path id="Path_38" data-name="Path 38" d="M237.478,430.4a1.86,1.86,0,1,0,.545,1.316A1.876,1.876,0,0,0,237.478,430.4Z" transform="translate(-234.301 -429.859)"/>
+                              </g>
+                            </g>
+                            <g id="Group_5" data-name="Group 5" transform="translate(0 47.825)">
+                              <g id="Group_4" data-name="Group 4">
+                                <path id="Path_39" data-name="Path 39" d="M55.648,272.514v-13.7a1.861,1.861,0,0,0-2.557-1.727L21.02,270.009H10.69a10.69,10.69,0,0,0,0,21.38h1.23v11.177a1.861,1.861,0,0,0,1.861,1.861h7.6a1.861,1.861,0,0,0,1.861-1.861V292.286l29.851,12.006a1.861,1.861,0,0,0,2.556-1.727v-13.7a8.387,8.387,0,0,0,0-16.356ZM19.519,300.7H15.643v-9.316h3.876V300.7Zm0-13.038H10.691a6.967,6.967,0,1,1,0-13.935H19.52ZM51.926,299.81h0L23.243,288.274V273.126l20.367-8.2v18.471a1.861,1.861,0,1,0,3.722,0v-19.97l4.594-1.85Zm3.722-14.84v-8.556a4.665,4.665,0,0,1,0,8.556Z" transform="translate(-0.001 -256.958)"/>
+                              </g>
+                            </g>
+                            <g id="Group_7" data-name="Group 7" transform="translate(67.531 69.754)">
+                              <g id="Group_6" data-name="Group 6">
+                                <path id="Path_40" data-name="Path 40" d="M375.234,374.775H364.7a1.861,1.861,0,1,0,0,3.722h10.538a1.861,1.861,0,1,0,0-3.722Z" transform="translate(-362.835 -374.775)"/>
+                              </g>
+                            </g>
+                            <g id="Group_9" data-name="Group 9" transform="translate(64.476 55.57)">
+                              <g id="Group_8" data-name="Group 8">
+                                <path id="Path_41" data-name="Path 41" d="M353.231,299.115a1.862,1.862,0,0,0-2.632,0l-3.635,3.635a1.861,1.861,0,0,0,2.632,2.632l3.635-3.635A1.862,1.862,0,0,0,353.231,299.115Z" transform="translate(-346.418 -298.57)"/>
+                              </g>
+                            </g>
+                            <g id="Group_11" data-name="Group 11" transform="translate(64.491 80.007)">
+                              <g id="Group_10" data-name="Group 10">
+                                <path id="Path_42" data-name="Path 42" d="M353.433,434.166l-3.756-3.757a1.861,1.861,0,1,0-2.632,2.632L350.8,436.8a1.861,1.861,0,0,0,2.632-2.632Z" transform="translate(-346.499 -429.864)"/>
+                              </g>
+                            </g>
+                            <g id="Group_13" data-name="Group 13" transform="translate(10.051)">
+                              <g id="Group_12" data-name="Group 12">
+                                <path id="Path_43" data-name="Path 43" d="M131.8,0H97.181a7.453,7.453,0,0,0-7.445,7.445v.744H58.468A4.472,4.472,0,0,0,54,12.656V42.063a4.472,4.472,0,0,0,4.467,4.467h1.923v5.708a1.861,1.861,0,0,0,3.177,1.316l7.024-7.024h36.971a4.472,4.472,0,0,0,4.467-4.467V36.48H131.8a7.453,7.453,0,0,0,7.445-7.445V7.445A7.453,7.453,0,0,0,131.8,0ZM108.307,42.063a.745.745,0,0,1-.744.744H69.821a1.861,1.861,0,0,0-1.316.545l-4.392,4.392V44.669a1.861,1.861,0,0,0-1.861-1.861H58.468a.745.745,0,0,1-.744-.744V12.656a.745.745,0,0,1,.744-.744H89.736V29.035a7.453,7.453,0,0,0,7.445,7.445h11.126Zm27.215-13.028a3.727,3.727,0,0,1-3.722,3.722H97.181a3.727,3.727,0,0,1-3.722-3.722V7.445a3.727,3.727,0,0,1,3.722-3.722H131.8a3.727,3.727,0,0,1,3.722,3.722Z" transform="translate(-54.001)"/>
+                              </g>
+                            </g>
+                            <g id="Group_15" data-name="Group 15" transform="translate(62.487 9.024)">
+                              <g id="Group_14" data-name="Group 14">
+                                <path id="Path_44" data-name="Path 44" d="M351.266,56.09l-12.738-7.354a1.861,1.861,0,0,0-2.792,1.612V65.056a1.861,1.861,0,0,0,2.792,1.612l12.738-7.354a1.861,1.861,0,0,0,0-3.223Zm-11.807,5.742V53.571l7.154,4.131Z" transform="translate(-335.736 -48.486)"/>
+                              </g>
+                            </g>
+                            <g id="Group_17" data-name="Group 17" transform="translate(19.452 19.543)">
+                              <g id="Group_16" data-name="Group 16">
+                                <path id="Path_45" data-name="Path 45" d="M124.985,105H106.373a1.861,1.861,0,1,0,0,3.722h18.612a1.861,1.861,0,0,0,0-3.722Z" transform="translate(-104.512 -105)"/>
+                              </g>
+                            </g>
+                            <g id="Group_19" data-name="Group 19" transform="translate(38.064 29.965)">
+                              <g id="Group_18" data-name="Group 18">
+                                <path id="Path_46" data-name="Path 46" d="M207.688,161.545a1.86,1.86,0,1,0,.545,1.316A1.874,1.874,0,0,0,207.688,161.545Z" transform="translate(-204.511 -161)"/>
+                              </g>
+                            </g>
+                            <g id="Group_21" data-name="Group 21" transform="translate(19.452 29.965)">
+                              <g id="Group_20" data-name="Group 20">
+                                <path id="Path_47" data-name="Path 47" d="M118,161H106.373a1.861,1.861,0,1,0,0,3.722H118A1.861,1.861,0,0,0,118,161Z" transform="translate(-104.512 -161)"/>
+                              </g>
+                            </g>
+                        </svg>
+                                                   
+                        <h3>Digital Marketing</h3>
+                        <hr>
+                    </div>
+                </div>
+                <div class="col col-lg-4 col-sm-12 col-12 col-md-6">
+                    <div class="my-card">
+                        <svg id="_007-feature" data-name="007-feature" xmlns="http://www.w3.org/2000/svg" width="103.76" height="96.842" viewBox="0 0 103.76 96.842">
+                            <path id="Path_48" data-name="Path 48" d="M6.917,83.258h3.459V79.8H6.917A3.458,3.458,0,0,1,3.459,76.34V7.167A3.458,3.458,0,0,1,6.917,3.709h76.09a3.458,3.458,0,0,1,3.459,3.459v3.459h3.459V7.167A6.918,6.918,0,0,0,83.008.25H6.917A6.918,6.918,0,0,0,0,7.167V76.34A6.918,6.918,0,0,0,6.917,83.258Zm0,0" transform="translate(0 -0.25)"/>
+                            <path id="Path_49" data-name="Path 49" d="M62.5,62.75h3.459v3.459H62.5Zm0,0" transform="translate(-55.583 -55.833)"/>
+                            <path id="Path_50" data-name="Path 50" d="M125,62.75h3.459v3.459H125Zm0,0" transform="translate(-111.165 -55.833)"/>
+                            <path id="Path_51" data-name="Path 51" d="M187.5,62.75h3.459v3.459H187.5Zm0,0" transform="translate(-166.748 -55.833)"/>
+                            <path id="Path_52" data-name="Path 52" d="M125,201.34a6.918,6.918,0,0,0,6.917,6.917h76.09a6.918,6.918,0,0,0,6.917-6.917V132.167a6.918,6.918,0,0,0-6.917-6.917h-76.09A6.918,6.918,0,0,0,125,132.167Zm3.459-69.173a3.458,3.458,0,0,1,3.459-3.459h76.09a3.458,3.458,0,0,1,3.459,3.459V201.34a3.458,3.458,0,0,1-3.459,3.459h-76.09a3.458,3.458,0,0,1-3.459-3.459Zm0,0" transform="translate(-111.165 -111.415)"/>
+                            <path id="Path_53" data-name="Path 53" d="M187.5,187.75h3.459v3.459H187.5Zm0,0" transform="translate(-166.748 -166.998)"/>
+                            <path id="Path_54" data-name="Path 54" d="M250,187.75h3.459v3.459H250Zm0,0" transform="translate(-222.331 -166.998)"/>
+                            <path id="Path_55" data-name="Path 55" d="M312.5,187.75h3.459v3.459H312.5Zm0,0" transform="translate(-277.914 -166.998)"/>
+                            <path id="Path_56" data-name="Path 56" d="M187.5,250.25h76.09v3.459H187.5Zm0,0" transform="translate(-166.748 -222.581)"/>
+                            <path id="Path_57" data-name="Path 57" d="M187.5,328.375h13.835v3.459H187.5Zm0,0" transform="translate(-166.748 -292.059)"/>
+                            <path id="Path_58" data-name="Path 58" d="M187.5,390.875h10.376v3.459H187.5Zm0,0" transform="translate(-166.748 -347.642)"/>
+                            <path id="Path_59" data-name="Path 59" d="M433.98,453.375a12.105,12.105,0,1,0,12.105,12.105A12.1,12.1,0,0,0,433.98,453.375Zm0,20.752a8.647,8.647,0,1,1,8.647-8.647A8.647,8.647,0,0,1,433.98,474.127Zm0,0" transform="translate(-375.183 -403.224)"/>
+                            <path id="Path_60" data-name="Path 60" d="M336.588,335.231a1.729,1.729,0,0,0-1.729-1.729h-4.571a21.981,21.981,0,0,0-1.368-3.3l3.232-3.23a1.731,1.731,0,0,0,0-2.446l-7.338-7.338a1.731,1.731,0,0,0-2.446,0l-3.23,3.231a22.364,22.364,0,0,0-3.3-1.366v-4.571a1.729,1.729,0,0,0-1.729-1.729H303.731A1.729,1.729,0,0,0,302,314.479v4.571a22.365,22.365,0,0,0-3.3,1.366l-3.23-3.231a1.731,1.731,0,0,0-2.446,0l-7.337,7.338a1.731,1.731,0,0,0,0,2.446l3.23,3.23c-.144.283-.284.567-.415.854a22.391,22.391,0,0,0-.951,2.449h-4.571a1.729,1.729,0,0,0-1.729,1.729v10.376a1.729,1.729,0,0,0,1.729,1.729h4.571a22.008,22.008,0,0,0,1.368,3.3l-3.232,3.23a1.731,1.731,0,0,0,0,2.446l7.337,7.338a1.731,1.731,0,0,0,2.446,0l3.23-3.23a22.378,22.378,0,0,0,3.3,1.366v4.571a1.729,1.729,0,0,0,1.729,1.729h10.376a1.729,1.729,0,0,0,1.729-1.729v-4.571a22.377,22.377,0,0,0,3.3-1.366l3.23,3.23a1.731,1.731,0,0,0,2.446,0l7.338-7.338a1.731,1.731,0,0,0,0-2.446l-3.232-3.23a21.985,21.985,0,0,0,1.368-3.3h4.571a1.729,1.729,0,0,0,1.729-1.729Zm-3.459,8.647h-4.14a1.729,1.729,0,0,0-1.674,1.3,18.908,18.908,0,0,1-2.023,4.89,1.73,1.73,0,0,0,.266,2.1l2.924,2.925-4.891,4.893-2.926-2.926a1.73,1.73,0,0,0-2.1-.266,18.888,18.888,0,0,1-4.89,2.023,1.729,1.729,0,0,0-1.3,1.674v4.14h-6.917v-4.14a1.729,1.729,0,0,0-1.3-1.674,18.888,18.888,0,0,1-4.89-2.023,1.73,1.73,0,0,0-2.1.266l-2.926,2.926-4.891-4.893,2.924-2.925a1.73,1.73,0,0,0,.266-2.1,18.9,18.9,0,0,1-2.023-4.89,1.729,1.729,0,0,0-1.674-1.3h-4.14v-6.917h4.14a1.729,1.729,0,0,0,1.674-1.3,18.78,18.78,0,0,1,1.124-3.169,19.109,19.109,0,0,1,.9-1.729,1.731,1.731,0,0,0-.266-2.1l-2.924-2.926,4.891-4.893,2.926,2.927a1.729,1.729,0,0,0,2.1.265,18.909,18.909,0,0,1,4.89-2.023,1.729,1.729,0,0,0,1.3-1.673v-4.134h6.917v4.14a1.729,1.729,0,0,0,1.3,1.674,18.886,18.886,0,0,1,4.89,2.023,1.73,1.73,0,0,0,2.1-.266l2.926-2.926,4.891,4.893-2.924,2.926a1.73,1.73,0,0,0-.266,2.1,18.911,18.911,0,0,1,2.023,4.891,1.729,1.729,0,0,0,1.674,1.3h4.14Zm0,0" transform="translate(-250.122 -278.164)"/>
+                            <path id="Path_61" data-name="Path 61" d="M781.25,781.5h10.376v3.458H781.25Zm0,0" transform="translate(-694.784 -695.034)"/>
+                        </svg>
+                        <h3>Programming Toch</h3>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row text-center">
+                <div class="col col-lg-4 col-sm-12 col-12 col-md-6">
+                    <div class="my-card">
+                        <svg id="_003-film-editing" data-name="003-film-editing" xmlns="http://www.w3.org/2000/svg" width="90.778" height="84.629" viewBox="0 0 90.778 84.629">
+                            <path id="Path_63" data-name="Path 63" d="M70.666,43.625H12.053l3.438-3.084a1.489,1.489,0,0,0,.578-.519l4.191-3.759a1.5,1.5,0,0,0,.617-.553l4.159-3.719a1.491,1.491,0,0,0,.654-.588l4.115-3.692a1.488,1.488,0,0,0,.694-.621l4.076-3.658a1.491,1.491,0,0,0,.732-.655l4.039-3.625a1.48,1.48,0,0,0,.769-.688l4-3.59a1.481,1.481,0,0,0,.8-.722l5.97-5.356a1.326,1.326,0,0,0,0-2.02L45.231,1.7A5.341,5.341,0,0,0,40.175.741a1.656,1.656,0,0,0-.291.012,1.579,1.579,0,0,0-.83.5,4.308,4.308,0,0,0-.617.448L5.744,31.026a1.733,1.733,0,0,0-.15.134L1.4,34.923a3.978,3.978,0,0,0,0,6.059L6.68,45.718v35.1a4.567,4.567,0,0,0,4.8,4.292H67.466a4.567,4.567,0,0,0,4.8-4.292V45.056a1.522,1.522,0,0,0-1.6-1.431ZM58.7,53.639l3.428-7.153h2.918l-3.428,7.153Zm-6.4,0,3.428-7.153h2.918l-3.428,7.153Zm-6.4,0,3.428-7.153h2.917l-3.428,7.153Zm-6.4,0,3.428-7.153h2.92l-3.428,7.153Zm-19.2,0,3.428-7.153H26.65l-3.428,7.153Zm-6.4,0,3.428-7.153h2.918l-3.428,7.153Zm-4.027,0V46.486h3.974l-3.428,7.153Zm.74-22.932,2.269,8.118-2.159,1.94-2.27-8.121Zm4.8-4.3,2.27,8.117-2.159,1.937-2.273-8.117Zm4.8-4.3,2.27,8.118-2.16,1.937-2.269-8.118Zm4.8-4.3,2.27,8.118-2.159,1.937-2.278-8.118Zm4.8-4.3,2.27,8.117-2.159,1.937-2.269-8.117Zm4.8-4.3,2.269,8.118-2.159,1.937-2.289-8.118ZM30.131,46.486h2.917l-3.426,7.153H26.7Zm6.4,0h2.919l-3.428,7.153H33.1Zm31.992,0h.544v7.153H65.094ZM47.5,7.778l-3.2,2.861L42.264,3.37a1.624,1.624,0,0,1,.7.344Zm-8.1-2.885,2.269,8.119L39.5,14.949l-2.27-8.119ZM3.667,36.943l2.156-1.934,2.2,7.857-4.353-3.9a1.326,1.326,0,0,1,0-2.02Zm63.8,45.306H11.479a1.522,1.522,0,0,1-1.6-1.431V56.5H69.066V80.819a1.522,1.522,0,0,1-1.6,1.431Zm0,0" transform="translate(-0.001 -0.481)"/>
+                            <path id="Path_64" data-name="Path 64" d="M96,366.959l-15.869-6.612a1.322,1.322,0,0,0-1.831,1.22v13.224a1.322,1.322,0,0,0,1.831,1.221L96,369.4a1.322,1.322,0,0,0,0-2.441Zm-15.056,5.849V363.55l11.108,4.629Zm0,0" transform="translate(-63.62 -298.097)"/>
+                            <path id="Path_65" data-name="Path 65" d="M234.664,351.711H216.151a1.322,1.322,0,1,0,0,2.645h18.514a1.322,1.322,0,1,0,0-2.645Zm0,0" transform="translate(-174.234 -292.676)"/>
+                            <path id="Path_66" data-name="Path 66" d="M234.664,385.844H216.151a1.322,1.322,0,1,0,0,2.645h18.514a1.322,1.322,0,1,0,0-2.645Zm0,0" transform="translate(-174.234 -321.071)"/>
+                            <path id="Path_67" data-name="Path 67" d="M234.664,419.977H216.151a1.322,1.322,0,1,0,0,2.645h18.514a1.322,1.322,0,1,0,0-2.645Zm0,0" transform="translate(-174.234 -348.572)"/>
+                            <path id="Path_68" data-name="Path 68" d="M234.664,454.109H216.151a1.323,1.323,0,1,0,0,2.645h18.514a1.323,1.323,0,0,0,0-2.645Zm0,0" transform="translate(-174.234 -377.415)"/>
+                            <path id="Path_69" data-name="Path 69" d="M147.886,18.91a1.323,1.323,0,0,0-1.323,1.323v1.322a1.322,1.322,0,1,0,2.645,0,1.322,1.322,0,1,0,0-2.645Zm0,0" transform="translate(-120.021 -16.054)"/>
+                            <path id="Path_70" data-name="Path 70" d="M308.946,18.91H275.886a1.322,1.322,0,1,0,0,2.645h31.738V63.872h-11.9a1.322,1.322,0,1,0,0,2.645h13.224a1.322,1.322,0,0,0,1.323-1.322V20.232a1.323,1.323,0,0,0-1.323-1.323Zm0,0" transform="translate(-219.49 -16.054)"/>
+                            <path id="Path_71" data-name="Path 71" d="M146.563,182.366v6.612a1.322,1.322,0,0,0,2.645,0v-6.612a1.322,1.322,0,1,0-2.645,0Zm0,0" transform="translate(-120.088 -150.467)"/>
+                            <path id="Path_72" data-name="Path 72" d="M201.854,54.366a1.323,1.323,0,0,0-1.323-1.323h-3.967a1.322,1.322,0,1,0,0,2.645h2.645v11.9H182.017a1.322,1.322,0,1,0,0,2.645h18.514a1.322,1.322,0,0,0,1.323-1.322Zm0,0" transform="translate(-146.55 -44.897)"/>
+                            <path id="Path_73" data-name="Path 73" d="M335.619,70.235h18.514a1.322,1.322,0,0,0,1.322-1.322V54.366a1.322,1.322,0,0,0-1.322-1.323H335.619a1.322,1.322,0,0,0-1.322,1.323V68.913A1.322,1.322,0,0,0,335.619,70.235Zm1.323-14.547H352.81v11.9H336.942Zm0,0" transform="translate(-269.967 -44.898)"/>
+                            <path id="Path_74" data-name="Path 74" d="M200.531,190.3a1.322,1.322,0,0,0,1.323-1.322v-6.612a1.323,1.323,0,0,0-1.323-1.323H182.018a1.323,1.323,0,0,0-1.323,1.323v6.612a1.322,1.322,0,0,0,2.645,0v-5.29h15.87v5.29a1.322,1.322,0,0,0,1.322,1.322Zm0,0" transform="translate(-146.551 -150.466)"/>
+                            <path id="Path_75" data-name="Path 75" d="M334.3,188.978a1.322,1.322,0,0,0,2.645,0v-5.29H352.81v11.9H346.2a1.322,1.322,0,1,0,0,2.645h7.935a1.322,1.322,0,0,0,1.322-1.322V182.366a1.322,1.322,0,0,0-1.322-1.323H335.618a1.322,1.322,0,0,0-1.322,1.323Zm0,0" transform="translate(-269.967 -150.13)"/>
+                        </svg>
+                        <h3>Music & Audio</h3>
+                        <hr>
+                    </div>
+                </div>
+                <div class="col col-lg-4 col-sm-12 col-12 col-md-6">
+                    <div class="my-card">
+                        <svg id="subject" xmlns="http://www.w3.org/2000/svg" width="94.467" height="94.467" viewBox="0 0 94.467 94.467">
+                            <g id="Group_24" data-name="Group 24" transform="translate(46.052 18.309)">
+                              <g id="Group_23" data-name="Group 23">
+                                <path id="Path_76" data-name="Path 76" d="M292.939,130.185h-13.7V103.524a1.384,1.384,0,0,0-1.384-1.384H260.637v-.786a2.122,2.122,0,0,0-3.359-1.724l-6.8,4.876a2.122,2.122,0,0,0,0,3.448l6.8,4.876a2.122,2.122,0,0,0,3.359-1.724v-.664h10.3v19.742H257.883a5.08,5.08,0,0,0-5.074,5.074v28.322a1.384,1.384,0,1,0,2.768,0V135.259a2.309,2.309,0,0,1,2.306-2.306h35.056a2.309,2.309,0,0,1,2.306,2.306v35.056a2.309,2.309,0,0,1-2.306,2.306H257.883a2.309,2.309,0,0,1-2.306-2.306v-.83a1.384,1.384,0,1,0-2.768,0v.83a5.08,5.08,0,0,0,5.074,5.074h35.056a5.08,5.08,0,0,0,5.074-5.074V135.259A5.08,5.08,0,0,0,292.939,130.185Zm-35.069-20.337-5.042-3.618,5.042-3.618Zm18.6,20.337H273.7V109.06a1.384,1.384,0,0,0-1.384-1.384H260.637v-2.768H276.47Z" transform="translate(-249.598 -99.231)"/>
+                              </g>
+                            </g>
+                            <g id="Group_26" data-name="Group 26" transform="translate(12.721 6.361)">
+                              <g id="Group_25" data-name="Group 25">
+                                <path id="Path_77" data-name="Path 77" d="M88.344,46.918,80.586,35.412a2.122,2.122,0,0,0-3.519,0L69.309,46.918a2.122,2.122,0,0,0,1.759,3.308H86.585a2.122,2.122,0,0,0,1.759-3.308Zm-16.062.54,6.544-9.706,6.544,9.706Z" transform="translate(-68.945 -34.476)"/>
+                              </g>
+                            </g>
+                            <g id="Group_28" data-name="Group 28" transform="translate(62.528 54.207)">
+                              <g id="Group_27" data-name="Group 27">
+                                <path id="Path_78" data-name="Path 78" d="M356.513,300.58l-5.727-5.726a3.611,3.611,0,0,0-5.106,0l-5.726,5.726a3.611,3.611,0,0,0,0,5.106l5.727,5.726h0a3.611,3.611,0,0,0,5.106,0l5.726-5.727a3.611,3.611,0,0,0,0-5.106Zm-1.957,3.149-5.726,5.727a.843.843,0,0,1-1.192,0h0l-5.727-5.727a.843.843,0,0,1,0-1.192l5.726-5.726a.842.842,0,0,1,1.192,0l5.727,5.726a.842.842,0,0,1,0,1.192Z" transform="translate(-338.897 -293.796)"/>
+                              </g>
+                            </g>
+                            <g id="Group_30" data-name="Group 30">
+                              <g id="Group_29" data-name="Group 29">
+                                <path id="Path_79" data-name="Path 79" d="M47.2,67.435,40.41,62.559a2.122,2.122,0,0,0-3.359,1.724v.663h-10.3V45.2H40.13A5.08,5.08,0,0,0,45.2,40.13V11.762a1.384,1.384,0,1,0-2.768,0V40.13a2.309,2.309,0,0,1-2.306,2.306H5.074A2.309,2.309,0,0,1,2.768,40.13V5.074A2.309,2.309,0,0,1,5.074,2.768H40.13a2.309,2.309,0,0,1,2.306,2.306V5.95a1.384,1.384,0,1,0,2.768,0V5.074A5.08,5.08,0,0,0,40.13,0H5.074A5.08,5.08,0,0,0,0,5.074V40.13A5.08,5.08,0,0,0,5.074,45.2H18.451V71.865a1.384,1.384,0,0,0,1.384,1.384h3.782a1.384,1.384,0,0,0,0-2.768h-2.4V45.2h2.768V66.33a1.384,1.384,0,0,0,1.384,1.384H37.051v2.768H29.475a1.384,1.384,0,0,0,0,2.768h7.576v.786a2.12,2.12,0,0,0,3.359,1.724l6.8-4.876a2.122,2.122,0,0,0,0-3.448Zm-7.386,5.342V65.541l5.042,3.618Z"/>
+                              </g>
+                            </g>
+                            <g id="Group_32" data-name="Group 32" transform="translate(9.225 25.355)">
+                              <g id="Group_31" data-name="Group 31">
+                                <path id="Path_80" data-name="Path 80" d="M75.369,137.42H51.384a1.384,1.384,0,0,0,0,2.768H75.369a1.384,1.384,0,0,0,0-2.768Z" transform="translate(-50 -137.42)"/>
+                              </g>
+                            </g>
+                            <g id="Group_34" data-name="Group 34" transform="translate(9.225 30.89)">
+                              <g id="Group_33" data-name="Group 33">
+                                <path id="Path_81" data-name="Path 81" d="M75.369,167.42H51.384a1.384,1.384,0,0,0,0,2.768H75.369a1.384,1.384,0,0,0,0-2.768Z" transform="translate(-50 -167.42)"/>
+                              </g>
+                            </g>
+                            <g id="Group_36" data-name="Group 36" transform="translate(9.225 36.425)">
+                              <g id="Group_35" data-name="Group 35">
+                                <path id="Path_82" data-name="Path 82" d="M75.369,197.42H51.384a1.384,1.384,0,0,0,0,2.768H75.369a1.384,1.384,0,0,0,0-2.768Z" transform="translate(-50 -197.42)"/>
+                              </g>
+                            </g>
+                            <g id="Group_38" data-name="Group 38" transform="translate(58.488 74.725)">
+                              <g id="Group_37" data-name="Group 37">
+                                <path id="Path_83" data-name="Path 83" d="M342.37,405H318.384a1.384,1.384,0,0,0,0,2.768H342.37a1.384,1.384,0,0,0,0-2.768Z" transform="translate(-317 -405)"/>
+                              </g>
+                            </g>
+                            <g id="Group_40" data-name="Group 40" transform="translate(58.488 80.26)">
+                              <g id="Group_39" data-name="Group 39">
+                                <path id="Path_84" data-name="Path 84" d="M342.37,435H318.384a1.384,1.384,0,0,0,0,2.768H342.37a1.384,1.384,0,0,0,0-2.768Z" transform="translate(-317 -435)"/>
+                              </g>
+                            </g>
+                            <g id="Group_42" data-name="Group 42" transform="translate(58.488 85.795)">
+                              <g id="Group_41" data-name="Group 41">
+                                <path id="Path_85" data-name="Path 85" d="M342.37,465H318.384a1.384,1.384,0,0,0,0,2.768H342.37a1.384,1.384,0,0,0,0-2.768Z" transform="translate(-317 -465)"/>
+                              </g>
+                            </g>
+                        </svg>                          
+                        <h3>Write & Trantalion</h3>
+                        <hr>
+                    </div>
+                </div>
+                <div class="col col-lg-4 col-sm-12 col-12 col-md-6">
+                    <div class="my-card">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="105.728" height="89.638" viewBox="0 0 105.728 89.638">
+                            <path id="Path_62" data-name="Path 62" d="M0,58.012V84.789c0,6.27,5.771,10.86,12.04,10.86H66.922c6.27,0,10.7-4.592,10.7-10.86V84.43L97.831,94.469a2.027,2.027,0,0,0,1.04.288c3.939,0,6.856-3.207,6.856-7.3V52.805c0-4.093-2.75-7.3-6.689-7.3A2.031,2.031,0,0,0,98,45.794L78,55.889a11.332,11.332,0,0,0-10.59-9.221A22.5,22.5,0,1,0,32.595,22,17.035,17.035,0,0,0,3.466,34.009a16.719,16.719,0,0,0,5.646,12.94A11.686,11.686,0,0,0,0,58.012Zm99.2-7.078a1.86,1.86,0,0,1,1.176,1.872V87.457A1.864,1.864,0,0,1,99.2,89.332l-21.578-10.9V61.775Zm-63.408-9.9a20.954,20.954,0,0,0,5.019,5.1H31.926A15.981,15.981,0,0,0,35.789,41.028Zm1.188-12.491a17.26,17.26,0,1,1,.517,4.1,16.889,16.889,0,0,0-.446-2.71C37.011,29.468,36.978,29.006,36.978,28.538ZM20.517,22.316a11.709,11.709,0,0,1,11.221,8.426,22.371,22.371,0,0,0,.446,2.711c.008.186.028.368.028.557A11.695,11.695,0,1,1,20.517,22.316ZM72.269,84.279A6.017,6.017,0,0,1,66.252,90.3H11.37a6.017,6.017,0,0,1-6.017-6.017V57.5a6.017,6.017,0,0,1,6.017-6.017H66.252A6.017,6.017,0,0,1,72.269,57.5Z" transform="translate(0 -6.011)"/>
+                        </svg>
+                        <h3>Video & Animation</h3>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5 mb-5">
+                <button type="button" class="btn my-button">See All Skills</button>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <section class="secod-section">
+      <div class="container">
+        <div class="text-center wow fadeInUp">
+            <p style="font-size: 2.75rem;" class="title">It's Easy to Get Work Done on <span style="font-weight: bold;">JOSGIGS</span></p>
+            <p class="details">There are many variations of passages oforem are many variations of There are many <br> variations of passages of</p>
+        </div>
+
+        <div class="text-center cont-pos">
+          <img class="img-fluid " src="images/snake.svg">
+
+              <div class="mt-5 my-content">
+                <div class="pos-1 wow bounceInLeft" data-wow-delay=".5s">
+                  <img src="images/ic-1.svg">
+                  <h4>Post a Job</h4>
+                </div>
+                <div class="pos-1-1 d-flex align-items-center wow fadeInRight" data-wow-delay=".1s">
+                  <h1 style="margin-right: 20px;" class="number-style">01</h1>
+                  <p style="font-weight: 500; letter-spacing: .5px;">Create your free job posting and start receiving Quotes within hours.</p>
+                </div>
+                  
+                <div class="pos-2 wow bounceInRight">
+                  <img src="images/ic-2.svg">
+                  <h4>Hire Freelancers</h4>
+                </div>
+                <div class="pos-2-2 d-flex align-items-center wow fadeInLeft">
+                  <p style="font-weight: 500; letter-spacing: .5px;">Create your free job posting and start receiving Quotes within hours.</p>
+                  <h1 style="margin-left: 20px;" class="number-style">02</h1>
+                </div>
+
+                <div class="pos-3 wow bounceInLeft">
+                  <img src="images/ic-3.svg">
+                  <h4>Get Work Done</h4>
+                </div>
+                <div class="pos-3-3 d-flex align-items-center wow fadeInRight">
+                  <h1 style="margin-right: 20px;" class="number-style">03</h1>
+                  <p style="font-weight: 500; letter-spacing: .5px;">Decide on how and when payments will be , communicate and track work.</p>
+                </div>
+
+                <div class="pos-4 wow bounceInRight">
+                  <img src="images/ic-4.svg">
+                  <h4>Make Secure <br> Payments</h4>
+                </div>
+                <div class="pos-4-4 d-flex align-items-center wow fadeInLeft"
+                  <p style="font-weight: 500; letter-spacing: .5px;">Create your free job posting and start receiving Quotes within hours.</p>
+                  <h1 style="margin-left: 20px;" class="number-style">04</h1>
+              </div>
+        </div>
+        </div>
+      </div>
+
+      <!--This how it show in small Screen-->
+      <div class="container cont-small-screen d-none">
+          <div class="d-flex align-items-center">
+            <h1 style="margin-right: 20px;" class="number-style">01</h1>
+            <p style="font-weight: 500; letter-spacing: .5px;">Decide on how and when payments will be , communicate and track work.</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <h1 style="margin-right: 20px;" class="number-style">02</h1>
+            <p style="font-weight: 500; letter-spacing: .5px;">Create your free job posting and start receiving Quotes within hours.</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <h1 style="margin-right: 20px;" class="number-style">03</h1>
+            <p style="font-weight: 500; letter-spacing: .5px;">Decide on how and when payments will be , communicate and track work.</p>
+          </div>
+          <div class="d-flex align-items-center">
+            <h1 style="margin-right: 20px;" class="number-style">04</h1>
+            <p style="font-weight: 500; letter-spacing: .5px;">Create your free job posting and start receiving Quotes within hours.</p>
+          </div>
+      </div>
+
+        <div class="text-center mt-5 wow fadeInUp">
+            <button class="btn my-button">See How JOSGIGS Works</button>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="third-section">
+        <div class="container">
+            <div class="text-center wow fadeInDown">
+                <h1 class="title">Work Your Way</h1>
+                <p class="details">Choose from four Payment terms and create Agreements.</p>
+            </div>
+
+            <div class="grid-container">
+                <div class="way way-1 wow fadeInLeft">
+                    <img class="wow swing" src="images/hand.png">
+                    <h2>Fixed Price</h2>
+                    <p>Set a total fixed cost for your job and create milestones to ensure you're satisfied every step of the way. Set a due date and the amount to be paid for each milestone.</p>
+                </div>
+
+                <div class="way way-2 wow fadeInLeft">
+                    <img class="wow swing" src="images/task.png">
+                    <h2>Task-Based</h2>
+                    <p>Pay for a single completed online freelance task, however big or small. Create and assign tasks as needed and generate invoice for each task once it is completed.</p>
+                </div>
+
+                <div class="way-img wow swing">
+                    <img class="wow swing" src="images/lab.png">
+                </div>
+
+                <div class="way way-3 wow fadeInRight">
+                    <img class="wow swing" src="images/hour.png">
+                    <h2>Hourly Rate</h2>
+                    <p>Track progress with ease and pay Freelancers by the hour using our Time Tracker software. If you hire multiple Freelancers for your job, you'll receive a breakdown of each Freelancer's hourly rate and time tracked.</p>
+                </div>
+
+                <div class="way way-4 wow fadeInRight">
+                    <img class="wow swing" src="images/pay.png">
+                    <h2>Recurring Payment</h2>
+                    <p>Set a total fixed cost for your job and create milestones to ensure you're satisfied every step of the way. Set a due date and the amount to be paid for each milestone.</p>
+                </div>
+            </div>
+
+            <!--This how it Show on Small Secreen-->
+            <div class="container flex-container d-none">
+              <div class=" d-flex align-items-center">
+                  <img class="pr-2" width="80px" src="images/hand.png">
+                  <h5 class="pr-2">Fixed Price</h5>
+                  <p>Set a total fixed cost for your job and create milestones to ensure you're satisfied every step of the way. Set a due date and the amount to be paid for each milestone.</p>
+              </div>
+              <div class=" d-flex align-items-center">
+                  <img class="pr-2" src="images/task.png">
+                  <h5 class="pr-2">Task-Based</h5>
+                  <p>Pay for a single completed online freelance task, however big or small. Create and assign tasks as needed and generate invoice for each task once it is completed.</p>
+              </div>
+              <div class=" d-flex align-items-center">
+                  <img class="pr-2" src="images/hour.png">
+                  <h5 class="pr-2">Hourly Rate</h5>
+                  <p>Track progress with ease and pay Freelancers by the hour using our Time Tracker software. If you hire multiple Freelancers for your job, you'll receive a breakdown of each Freelancer's hourly rate and time tracked.</p>
+              </div>
+              <div class=" d-flex align-items-center">
+                  <img class="pr-2" width="70px" src="images/pay.png">
+                  <h5 class="pr-2">Recurring Payment</h5>
+                  <p>Set a total fixed cost for your job and create milestones to ensure you're satisfied every step of the way. Set a due date and the amount to be paid for each milestone.</p>
+              </div>
+            </div>
+
+            <div class="text-center mt-5 mb-5">
+                <button type="button" class="btn my-button">Learn About Agreements</button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="forth-section carousel slide" data-ride="carousel">
+        <div class="container text-center">
+            <div class="pt-5 wow bounceInDown">
+                <img class="wow swing" src="images/logo-w.png">
+                <p>Custom Enterprise Solutions for Your Business.</p>
+            </div>
+
+            <div class="wow bounceInUp" style="padding-top: 20px">
+                <img class="cycle-img wow swing" src="images/icon-1.svg">
+                <p>Compliance & Security Benefits</p>
+            </div>
+            
+            <div class="d-flex justify-content-around">
+                <div class="wow bounceInLeft">
+                    <img class="cycle-img wow swing" src="images/icon-2.svg">
+                    <p>Custom Built Solutions</p>
+                </div>
+                <div class="wow bounceInRight">
+                    <img class="cycle-img wow swing" src="images/icon-3.svg">
+                    <p>Industry Lowest Fees</p>
+                </div>
+            </div>
+            <div class="zer wow fadeInUp" data-wow-delay=".5s">
+                <button type="button">Learn About JOSGIGS Enterprise</button>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!--      fifth-section       -->
+
+    <div class="container d-flex justify-content-between mt-5 mb-3">
+      <div class="p-h2">
+          <p>TESTOMONIALS</p>
+          <h2>What our clients say about us.</h2>
+      </div>
+      <div class="arrows">
+          <span><i class="fas fa-arrow-left arrow-prev"></i></span>
+          <span><i class="fas fa-arrow-right arrow-next"></i></span>
+      </div>
+      
+    </div>
+
+    <section class="container slider-card">
+      <div class="items card-body text-center">
+          <p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+          <hr>
+          <img class="rounded-circle" src="images/person-1.png">
+          <h5 class="card-title">Ed Bagley</h5>
+      </div>
+
+      <div class="items card-body text-center">
+          <p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+          <hr>
+          <img class="rounded-circle" style="width: 24%;" src="images/person-2.png">
+          <h5 class="card-title">Ed Bagley</h5>
+      </div>
+
+      <div class="items card-body text-center">
+          <p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+          <hr>
+          <img class="rounded-circle" src="images/person-3.png">
+          <h5 class="card-title">Ed Bagley</h5>
+      </div>
+
+      <div class="items card-body text-center">
+          <p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+          <hr>
+          <img class="rounded-circle" src="images/person-1.png">
+          <h5 class="card-title">Ed Bagley</h5>
+      </div>
+
+      <div class="items card-body text-center">
+          <p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+          <hr>
+          <img class="rounded-circle" style="width: 24%;" src="images/person-2.png">
+          <h5 class="card-title">Ed Bagley</h5>
+      </div>
+
+      <div class="items card-body text-center">
+          <p class="card-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+          <hr>
+          <img class="rounded-circle" src="images/person-3.png">
+          <h5 class="card-title">Ed Bagley</h5>
+      </div>
+    </section>
+
+    
+
+
+    <section class="sixth-section container d-flex justify-content-between align-items-center">
+      <div>
+        <img class="img-fluid wow fadeIn" src="images/bg-img.png"></div>
+        <div>
+          <h1 class="wow fadeInDown">Get Quotes from Top <br> Freelance Professionals <br> for Free!</h1>
+          <button class="btn my-button wow fadeInUp" style="width: 100%; margin-top: 15px;" type="submit">Post a Job Now</button>
+        </div>
+    </section>
+    
+
+    <section class="section-seven-eight">
+        <div class="container">
+            <div class="text-center wow fadeInUp">
+              <h1 class="title">Browse Freelancers</h1>
+              <p class="details">Top Skills</p>
+            </div>
+
+            <div class="mylist row wow fadeIn">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <a class="nav-link" href="#">Android App Developers</a>
+                <a class="nav-link" href="#">Graphic Designers</a>
+                <a class="nav-link" href="#">Web Developers</a>
+                <a class="nav-link" href="#">Python Developers</a>
+                <a class="nav-link" href="#">Marketers</a>
+                <a class="nav-link" href="#">Android App Developers</a>
+                <a class="nav-link" href="#">Graphic Designers</a>
+              </div>
+
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <a class="nav-link" href="#">Virtual Assistants</a>
+                <a class="nav-link" href="#">Sales and Marketing Experts</a>
+                <a class="nav-link" href="#">User Interface Designers (UI)</a>
+                <a class="nav-link" href="#">Artists</a>
+                <a class="nav-link" href="#">Mobile App Developers</a>
+                <a class="nav-link" href="#">Virtual Assistants</a>
+                <a class="nav-link" href="#">Sales and Marketing Experts</a>
+              </div>
+
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <a class="nav-link" href="#">iOS App Developers</a>
+                <a class="nav-link" href="#">SEO Experts</a>
+                <a class="nav-link" href="#">Translators</a>
+                <a class="nav-link" href="#">API Developers</a>
+                <a class="nav-link" href="#">Logo Designers</a>
+                <a class="nav-link" href="#">iOS App Developers</a>
+                <a class="nav-link" href="#">SEO Experts</a>
+              </div>
+
+              <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <a class="nav-link" href="#">PHP Developers</a>
+                <a class="nav-link" href="#">Web Designers</a>
+                <a class="nav-link" href="#">Social Media Marketers</a>
+                <a class="nav-link" href="#">Copywriters</a>
+                <a class="nav-link" href="#">Illustrators</a>
+                <a class="nav-link" href="#">PHP Developers</a>
+                <a class="nav-link" href="#">Web Designers</a>
+              </div>
+            </div>
+
+            <div class="text-center wow fadeInUp">
+              <button class="btn new-btn mt-5">Browse All Skills</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-seven-eight mt-5">
+      <div class="container">
+          <div class="text-center wow fadeInDown" style="margin-bottom: 30px;">
+            <h1 class="title">Top Locations</h1>
+          </div>
+
+          <div class="mylist row wow fadeIn">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <a class="nav-link" href="#">Freelancers in Canada</a>
+              <a class="nav-link" href="#">Freelancers in Israel</a>
+              <a class="nav-link" href="#">Freelancers in Palestine</a>
+              <a class="nav-link" href="#">Freelancers in Egypt</a>
+              <a class="nav-link" href="#">Freelancers in USA</a>
+              <a class="nav-link" href="#">Freelancers in Ger</a>
+              <a class="nav-link" href="#">Freelancers in Moroco</a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <a class="nav-link" href="#">Freelancers in Canada</a>
+              <a class="nav-link" href="#">Freelancers in Israel</a>
+              <a class="nav-link" href="#">Freelancers in Palestine</a>
+              <a class="nav-link" href="#">Freelancers in Egypt</a>
+              <a class="nav-link" href="#">Freelancers in USA</a>
+              <a class="nav-link" href="#">Freelancers in Ger</a>
+              <a class="nav-link" href="#">Freelancers in Moroco</a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <a class="nav-link" href="#">Freelancers in Canada</a>
+              <a class="nav-link" href="#">Freelancers in Cairo</a>
+              <a class="nav-link" href="#">Freelancers in Palestine</a>
+              <a class="nav-link" href="#">Freelancers in Egypt</a>
+              <a class="nav-link" href="#">Freelancers in USA</a>
+              <a class="nav-link" href="#">Freelancers in Ger</a>
+              <a class="nav-link" href="#">Freelancers in Moroco</a>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+              <a class="nav-link" href="#">Freelancers in Canada</a>
+              <a class="nav-link" href="#">Freelancers in Israil</a>
+              <a class="nav-link" href="#">Freelancers in Palestine</a>
+              <a class="nav-link" href="#">Freelancers in Egypt</a>
+              <a class="nav-link" href="#">Freelancers in USA</a>
+              <a class="nav-link" href="#">Freelancers in Ger</a>
+              <a class="nav-link" href="#">Freelancers in Moroco</a>
+            </div>
+          </div>
+
+          <div class="text-center">
+            <button class="btn new-btn mt-5">Browse All Locations</button>
+          </div>
+      </div>
+  </section>
+  
+  <footer class="mt-5">
+    <div class="container">
+      <div class="row wow fadeIn">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <h5>Navigate</h5>
+          <a class="nav-link" href="#">Home</a>
+          <a class="nav-link" href="#">Post a Job</a>
+          <a class="nav-link" href="#">Find a Freelancer</a>
+          <a class="nav-link" href="#">Enterprise Solutions</a>
+          <a class="nav-link" href="#">Agency Solutions</a>
+          <a class="nav-link" href="#">PO Solutions</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <h5>Company Info</h5>
+          <a class="nav-link" href="#">About JOSGIGS</a>
+          <a class="nav-link" href="#">How JOSGIGS Works</a>
+          <a class="nav-link" href="#">Why JOSGIGS</a>
+          <a class="nav-link" href="#">Work Agreements</a>
+          <a class="nav-link" href="#">SafePay</a>
+          <a class="nav-link" href="#">Pricing</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <h5>Resources</h5>
+          <a class="nav-link" href="#">Help & FAQ's</a>
+          <a class="nav-link" href="#">Blog</a>
+          <a class="nav-link" href="#">Contact Us</a>
+          <a class="nav-link" href="#">APIs</a>
+          <a class="nav-link" href="#">Freelncer Directory</a>
+        </div>
+
+        <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <h5>Policies</h5>
+          <a class="nav-link" href="#">IP Poilcy</a>
+          <a class="nav-link" href="#">Privacy Policy</a>
+          <a class="nav-link" href="#">Terms of Service</a>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <h3>Connect With Us</h3>
+        <div class="flex-row social-icon">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      
+      <hr>
+
+      <div class="last-footer d-flex justify-content-between">
+        <div class="d-flex">
+          <img src="images/logo-small.png">
+          <p> | Get work done</p>
+        </div>
+        
+        <div>
+          Copyright © 2020, josgigs.com
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+    
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

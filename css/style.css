@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar{
+    box-shadow: 0px 0px 5px 0px #00000031;
+    background-color: white;
+}
+.navbar .logo{
+    width: 80px;
+    padding-bottom: 5px;
+    margin-right: 60px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: #2C2C2C;
+    padding-right: 18px;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #08A63D;
+}
+.navbar-light .navbar-toggler {
+    border: none;
+    outline: none;
+}
+div#navbarSupportedContent{
+    transition: .3s ease-in-out;
+}
+
+.my-btn {
+    padding: 4px 20px 4px 20px;
+    background: linear-gradient(90deg, #115240, #267B4B);
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    margin-right: 10%;
+}
+nav .my-btn:hover{
+    background: linear-gradient(45deg, #267B4B, #115240);
+    color: white;
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem #267b4b61;
+}
+input:focus{
+    outline: 0;
+    border: 0;
+    box-shadow: 0 0 0 0.2rem #267b4b61 !important;
+}
+.second-nav-link a{
+    text-decoration: none;
+    color: #2C2C2C;
+    padding: 15px;
+    cursor: pointer;
+}
+.second-nav-link a:hover{
+    color: #089B3C;
+}
+
+.modal-backdrop {
+    z-index: 1029 !important;
+    transition: .3s ease-in-out;
+}
+.modal {
+    z-index: 1028 !important;
+    animation: bounceIn .5s;
+}
+@keyframes bounceIn {
+    0% {
+      transform: scale(0.2);
+      
+    }
+    50% {
+      transform: scale(1.2);
+      
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+.modal-title{
+    color: #0B873E;
+    font-size: 20px;
+}
+
+/* Header------------------------*/
+header{
+    background: url(../images/bg.png) center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 93vh;
+    z-index: 100;
+}
+header .overlay{
+    background: linear-gradient(-45deg, rgba(255, 255, 255, 0.190), rgb(8, 155, 60, 27%));
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+header .overlay h1{
+    margin-top: 145px;
+    font-size: 50px;
+    font-weight: 700;
+}
+header .overlay p{
+    margin-top: 20px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+header .overlay hr{
+    border: 1.5px solid #0B873E;
+    border-radius: 10px;
+    width: 70px;
+    margin: 12px 0 20px 0;
+}
+header .overlay .inputs{
+    display: flex;
+    width: 450px;
+    position: relative;
+}
+
+header .overlay .inputs .form-control{
+    padding-left: 25px;
+}
+header .overlay .inputs i{
+    position: absolute;
+    left: 7px;
+    top: 12px;
+    font-size: 14px;
+    color: #ACACAC;
+}
+header .overlay .inputs .form-control::placeholder{
+    color: #ACACAC;
+    font-size: 14px;
+}
+header .overlay .inputs .form-control:hover{
+    box-shadow:inset 0 0 3px 1px #aaa9a9bb;
+}
+header .overlay .inputs .btn{
+    background: linear-gradient(90deg, #115240, #267B4B);
+    width: 170px;
+    color: white;
+    margin-left: 3%;
+    border: none;
+}
+header .overlay .inputs .btn:hover{
+    background: linear-gradient(45deg, #267B4B, #115240);
+}
+@media (max-width: 576px){
+    header .overlay h1{
+        margin-top: 100px;
+        font-size: 35px;
+        font-weight: 700;
+    }
+    header .overlay p{
+        margin-top: 20px;
+        font-size: 16px;
+    }
+    header .overlay .inputs{
+        width: 350px;
+    }
+    header .overlay .inputs .btn{
+        width: 90px;
+    }
+}
+/*--------------*/
+
+.first-section .container .row .my-card{
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px 0px #b8b8b850;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+.first-section .container .row .my-card hr{
+    border: 6px solid #0B873E;
+    width: 100%;
+    position: absolute;
+    bottom: -16px;
+    animation: move .2s;
+    display: none;
+}
+@keyframes move {
+    from {width: 50%;}
+    to {width: 100%;}
+  }
+.first-section .container .row .my-card h3{
+    margin-top: 20px;
+    font-size: 18px;
+    padding-bottom: 50px;
+    font-weight: bold;
+}
+.first-section .container .row .my-card svg{
+    width: 100%;
+    margin-top: 50px;
+}
+
+.first-section .container .row .my-card:hover hr{
+    display: block;
+}
+.first-section .container .row .my-card:hover{
+    box-shadow: 0 0 10px 0px #4d4d4d50;
+}
+.my-card:hover svg{
+    fill: #0B873E;
+}
+.my-card:hover h3{
+    color: #0B873E;    
+}
+.my-button{
+    background: linear-gradient(90deg, #115240, #267B4B);
+    color: white;
+    width: 200px;
+    padding: 7px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+}
+.my-button:hover{
+    background: linear-gradient(45deg, #267B4B, #115240);
+}
+
+
+/*  Second Section ------------------------------------*/
+
+
+.secod-section .cont-pos{
+    position: relative;
+}
+.secod-section .my-content .pos-1{
+    position: absolute;
+    top: 30px;
+    left: 50px;
+}
+.secod-section .my-content .pos-1-1{
+    position: absolute;
+    top: 30px;
+    left: 300px;
+}
+.secod-section .my-content .pos-2{
+    position: absolute;
+    top: 180px;
+    right: 50px;
+}
+.secod-section .my-content .pos-2-2{
+    position: absolute;
+    top: 180px;
+    right: 300px;
+}
+.secod-section .my-content .pos-3{
+    position: absolute;
+    top: 330px;
+    left: 50px;
+}
+.secod-section .my-content .pos-3-3{
+    position: absolute;
+    top: 330px;
+    left: 300px;
+}
+.secod-section .my-content .pos-4{
+    position: absolute;
+    top: 480px;
+    right: 50px;
+}
+.secod-section .my-content .pos-4-4{
+    position: absolute;
+    top: 480px;
+    right: 300px;
+}
+.number-style{
+    font-size: 80px;
+    color: #267B4B;
+}
+
+
+
+@media (max-width: 768px){
+    .secod-section .cont-pos{
+        display: none;
+    }
+    .cont-small-screen{
+        display: block !important;
+    }
+    .number-style{
+        font-size: 60px;
+        color: #267B4B;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+/*----------------------------------*/
+
+.third-section{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.third-section .container .grid-container .way{
+    width: 350px;
+    height: auto;
+}
+.third-section .container .grid-container .way img{
+    width: 60px;
+}
+.third-section .container .grid-container .way-img{
+    width: 300px;
+}
+.third-section .container .grid-container .way-img img{
+    width: 90%;
+}
+.third-section .container .grid-container{
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+                        'way-1 . way-3'
+                        '. way-img .'
+                        'way-2 . way-4';
+}
+
+.way-1{
+    grid-area: way-1;
+}
+.way-2{
+    grid-area: way-2;
+}
+.way-3{
+    grid-area: way-3;
+}
+.way-4{
+    grid-area: way-4;
+}
+.way-img{
+    grid-area: way-img;
+}
+
+@media (max-width: 768px){
+    .third-section .container .grid-container{
+        display: none;
+    }
+    .third-section .flex-container{
+        display: block !important;
+    }
+    .third-section .flex-container p{
+        font-size: 14px;
+    }
+}
+
+
+/*----------------------------*/
+
+.forth-section{
+    background: url(../images/bg-2.svg) center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    background-attachment: fixed;
+    width: 100%;
+    height: 520px;
+}
+.forth-section .container div p{
+    color: white;
+    letter-spacing: .5px;
+    line-height: 40px;
+    font-weight: bold;
+}
+.forth-section .container div .cycle-img{
+    padding: 15px;
+    background-color: white;
+    border-radius: 50%;
+}
+.forth-section .container .zer button{
+    background-color: #FFFFFF;
+    color: #267B4B;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    font-weight: 500;
+}
+.forth-section .container .zer button:hover{
+    opacity: .8;
+}
+/*----------------- fifth-section -------------------*/ 
+/*--------  القسم الخامس -------- Slider Card  */
+
+.slider-card{
+    display: flex;
+}
+.slider-card .items{
+    outline: none;
+    margin: 20px;
+    box-shadow: 0px 0px 20px 0px #94949450;
+}
+.slider-card .items img{
+    margin: 5px auto;
+    transition: all linear .5s;
+}
+.container .p-h2 p{
+    color: #707070;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.container .p-h2 h2{
+    color: #2C2C2C;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+.container .items:hover{
+    box-shadow: 0px 0px 20px 2px #71717150;
+    cursor: pointer;
+}
+.items hr{
+    border: 1.5px solid #0B873E;
+    width: 30px;
+    border-radius: 30px;
+    margin: 0 auto 15px auto;
+}
+.container .arrows span i{
+    padding: 10px;
+    cursor: pointer;
+    color: #C7C7C7;
+    font-size: 25px;
+}
+.container .arrows i:hover{
+    background-color: #115240;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+/*
+.fifth-section .container .p-h2 p{
+    color: #707070;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.fifth-section .container .p-h2 h2{
+    color: #2C2C2C;
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+
+.fifth-section .container .arrows{
+    padding-top: 20px;
+}
+.fifth-section .container .arrows a{
+    cursor: pointer;
+    color: #C7C7C7;
+    font-size: 25px;
+}
+.fifth-section .container .arrows a i{
+    padding-left: 10px;
+}
+.fifth-section .container .arrows a i:hover{
+    background-color: #115240;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.fifth-section .container .clients-card{
+    box-shadow: 0px 0px 20px 2px #71717150;
+    margin: 20px;
+}
+.fifth-section .container .clients-card:hover{
+    box-shadow: 0px 0px 20px 5px #71717150;
+    cursor: pointer;
+    transform: scale(1.1, 1.1);
+    transition: .5s ease-in-out;
+}
+.fifth-section .clients-card hr{
+    border: 1.5px solid #0B873E;
+    width: 30px;
+    border-radius: 30px;
+}
+/*
+/*  القسم الخامس --------------------------------- Slider Card  */
+
+/* ------------------------------ */
+
+.sixth-section{
+    margin-top: 150px;
+}
+/* --------------------*/ 
+
+.section-seven-eight{
+    margin-top: 150px;
+}
+.section-seven-eight .mylist{
+    line-height: 30px;
+    font-weight: 500;
+    color: #363636f1;
+}
+.section-seven-eight .mylist .nav-link{
+    color: #363636f1;
+}
+.section-seven-eight .mylist .nav-link:hover{
+    color: #107055;
+}
+.section-seven-eight .new-btn{
+    width: 250px;
+    color: #115240;
+    font-weight: bold;
+    border: 1px solid #115240;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+}
+.section-seven-eight .new-btn:hover{
+    color: white;
+    background-color: #115240;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    transition: .3s ease-in-out;
+}
+/**----------------------------------*/
+footer{
+    padding-top: 50px;
+    background-color: #115240;
+    color: white;
+}
+footer .nav-link{
+    color: #fff;
+}
+footer .nav-link:hover{
+    background-color: #dddddd;
+    color: #115240;
+    font-weight: 500;
+    border-radius: 20px;
+    width: fit-content;
+}
+footer .social-icon a{
+    color: white;
+}
+footer .social-icon a:hover{
+    opacity: .6;
+}
+footer .social-icon i{
+    font-size: 40px;
+    padding-right: 15px;
+}
+footer hr{
+    border: 1px solid rgba(187, 187, 187, 0.336);
+}
+footer .last-footer img{
+    width: 60px;
+    height: 20px;
+    padding-right: 10px;
+}
+footer .last-footer{
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: #dbdbdbee;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Title & Details Style css عام*/
+.title{
+    color: #2C2C2C;
+    letter-spacing: .5px;
+}
+.details{
+    color:#9098A1;
+    line-height: 22px;
+    font-size: 14px;
+}
+.my-button{
+    background: linear-gradient(90deg, #115240, #267B4B);
+    color: white;
+    border: none;
+    width: 250px;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+}
+.my-button:hover{
+    color: white;
+    background: linear-gradient(45deg, #267B4B, #115240);
+}
