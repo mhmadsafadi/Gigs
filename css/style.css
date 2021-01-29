@@ -617,6 +617,11 @@ footer .last-footer{
     color: #dbdbdbee;
 }
 
+@media (max-width: 576px){
+    footer .row div h5{
+        margin-top: 2rem;
+    }
+}
 
 
 
