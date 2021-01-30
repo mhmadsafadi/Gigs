@@ -446,6 +446,7 @@ header .overlay .inputs .btn .icon{
 
 .slider-card{
     display: flex;
+    user-select: text;
 }
 .slider-card .items{
     outline: none;
