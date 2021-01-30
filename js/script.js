@@ -5,9 +5,13 @@ $(document).ready(function(){
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
+        dots: false,
+        autoplay: true,
+        autoplaySpeed: 2000,
         prevArrow: '.arrow-prev',
         nextArrow: '.arrow-next',
         centerPadding: '60px',
+        swipe: false,
         responsive: [
           {
             breakpoint: 1024,
@@ -20,14 +24,16 @@ $(document).ready(function(){
             breakpoint: 700,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                swipe: true,
               }
           },
           {
             breakpoint: 576,
               settings: {
                 slidesToShow: 1,
-                slidesToScroll: 1
+                slidesToScroll: 1,
+                swipe: true,  
               }
           }
         ]
